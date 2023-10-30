@@ -1,0 +1,121 @@
+/* Estilos CSS para a aba de opções */
+.tab-content {
+  display: none;
+}
+
+/* Estilos CSS para os botões da aba */
+.tab-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Alterado para "block" para que os botões fiquem em filas verticais */
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px 0; /* Espaçamento vertical entre os botões */
+  border-radius: 5px; /* Cantos arredondados */
+  
+}
+.btnPrecision{
+  display: block;
+  margin: 5px 0;
+}
+
+/* Estilize o botão quando o mouse passar sobre ele */
+.tab-button:hover {
+  background-color: #45A048;
+  
+}
+
+.container {
+    color: #050600;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilo para o rodapé */
+  .footer-links {
+    list-style: none;
+    text-align: center;
+    background-color: #87cefa;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    display: inline;
+    margin: 0;
+  }
+  
+  .footer-links a {
+    color:#000204;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  
+  /* Adicione media queries para tornar os links responsivos */
+  @media screen and (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links li {
+        margin: 5px 0;
+    }
+    
+    .footer-links a {
+        padding: 10px 0;
+        width: 100%;
+    }
+  }
+  
+  
+  
+  .footer-links a[href="facial.html"] {
+    font-size: 24px; /* Aumentar o tamanho da fonte */
+    font-weight: bold; /* Deixar o texto em negrito */
+    color: #0f457b; /* Definir uma cor destacada */
+  }
+  
+  .footer-links i {
+    font-size: 24px;
+    margin-bottom: 10px; /* Espaçamento entre o ícone e a descrição */
+  }
+  
+  .footer-links span {
+    font-size: 16px;
+  }
+  /* Estilos CSS para a aba de opções */
+.tab-content {
+    display: none;
+}
+
+/* Estilos CSS para os botões da aba */
+.tab-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px; /* Espaçamento entre os botões */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+/* Estilize o botão quando o mouse passar sobre ele */
+.tab-button:hover {
+    background-color: #45A048;
+}

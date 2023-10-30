@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <canvas id="meuGrafico" width="400" height="200"></canvas>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="esta.js" defer></script>
+    <link href="esta.css" rel="stylesheet">
+
+
+<head>
+    <h1>Como você está evoluindo?</h1>
+    <title>Estatística</title>
+    <style>
+     
+        /* Estilos para centralizar o título */
+        h1 {
+            text-align: center; /* Centraliza horizontalmente */
+            margin-top: 20px; /* Adiciona espaço superior */
+        }
+  
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3e3e3;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            color: #030201;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+
+            color: #050600;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <canvas id="segunda" width="400" height="200"></canvas>
+        <canvas id="terca" width="400" height="200"></canvas>
+        <canvas id="quarta" width="400" height="200"></canvas>
+        <canvas id="quinta" width="400" height="200"></canvas>
+        <canvas id="sexta" width="400" height="200"></canvas>
+        <canvas id="sabado" width="400" height="200"></canvas>
+        <canvas id="domingo" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+        const dados = {
+            labels: ['Felicidade', 'Raiva', 'Tristeza', 'Angústia'],
+            datasets: [
+                {
+                    label: 'Segunda-feira',
+                    data: [1, 2, 3, 1],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)']
+                },
+                {
+                    label: 'Terça-feira',
+                    data: [1, 5, 1, 1],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)']
+                },
+                
+                {
+                    label: 'Quarta-feira',
+                    data: [3, 1, 2, 1],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)']
+                },
+                {
+                    label: 'Quinta-feira',
+                    data: [2, 1, 1, 1],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)']
+                },
+                {
+                    label: 'Sexta-feira',
+                    data: [4,1, 0, 0],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)']
+                },
+                {
+                    label: 'Sábado',
+                    data: [3, 3, 2, 2],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)']
+                },
+                {
+                    label: 'Domingo',
+                    data: [5, 2, 3, 1],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)']
+                },
+                
+            ]
+        };
+
+        const diasDaSemana = ['segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado', 'domingo'];
+
+        diasDaSemana.forEach((dia, index) => {
+            const ctx = document.getElementById(dia).getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: dados.labels,
+                    datasets: [dados.datasets[index]]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    
+    
+    
+    
+    <div class="wrapper">
+        <header>
+            <p class="current-date"></p>
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </header>
+        <!-- Conteúdo da página "Agenda" ... -->
+        <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-calendar"></i><span>Agenda</span></a></li>
+            <li><a href="estatitica.html"><i class="fas fa-chart-bar"></i>Estatística</a></li>
+            <li><a href="facial.html"><i class="fas fa-user"></i>Reconhecimento Facial</a></li>
+            <li><a href="perfil.html"><i class="fas fa-user-circle"></i>Perfil</a></li>
+            <li><a href="mais.html"><i class="fas fa-plus"></i>Mais</a></li>
+        </ul>
+    </div>
+</body>
+</html>

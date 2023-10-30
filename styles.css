@@ -1,0 +1,190 @@
+.container {
+  color: #050600;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo para o rodapé */
+.footer-links {
+  list-style: none;
+  text-align: center;
+  background-color: #87cefa;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0;
+}
+
+.footer-links a {
+  color:#000204;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+/* Adicione media queries para tornar os links responsivos */
+@media screen and (max-width: 768px) {
+  .footer-links {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .footer-links li {
+      margin: 5px 0;
+  }
+  
+  .footer-links a {
+      padding: 10px 0;
+      width: 100%;
+  }
+}
+
+
+
+.footer-links a[href="facial.html"] {
+  font-size: 24px; /* Aumentar o tamanho da fonte */
+  font-weight: bold; /* Deixar o texto em negrito */
+  color: #0f457b; /* Definir uma cor destacada */
+}
+
+.footer-links i {
+  font-size: 24px;
+  margin-bottom: 10px; /* Espaçamento entre o ícone e a descrição */
+}
+
+.footer-links span {
+  font-size: 16px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+  min-height: 100vh;
+  background: #9B59B6;
+}
+.wrapper{
+ background-color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header{
+  text-align: center;
+  padding: 10px;
+  position: absolute ;
+
+  
+  
+
+}
+
+
+
+.icons{
+  position: absolute;
+  left: 33%;
+}
+header .icons{
+  display: flex;
+  
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 100%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 100px;
+}
+.calendar{
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: #9B59B6;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
